@@ -2,15 +2,6 @@ name: Build Baby Music APK
 # Build trigger enabled for APK delivery
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/build-apk.yml"
-      - "sources.json"
-      - "scripts/download_audio.py"
-      - "app/**"
-      - "build.gradle"
-      - "settings.gradle"
   workflow_dispatch:
     inputs:
       urls:
