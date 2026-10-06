@@ -1,0 +1,85 @@
+name: Build Baby Music APK
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "URL media được phép tải (cách nhau bằng dòng mới, khoảng trắng hoặc dấu phẩy). Để trống để dùng sources.json."
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Download audio and build APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install yt-dlp and ffmpeg
+        shell: bash
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --upgrade yt-dlp
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Prepare optional cookies
+        id: cookies
+        shell: bash
+        env:
+          YOUTUBE_COOKIES_B64: ${{ secrets.YOUTUBE_COOKIES_B64 }}
+        run: |
+          if [ -n "$YOUTUBE_COOKIES_B64" ]; then
+            echo "$YOUTUBE_COOKIES_B64" | base64 --decode > "$RUNNER_TEMP/youtube-cookies.txt"
+            echo "args=--cookies $RUNNER_TEMP/youtube-cookies.txt" >> "$GITHUB_OUTPUT"
+          else
+            echo "args=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download permitted audio and create song manifest
+        shell: bash
+        env:
+          INPUT_URLS: ${{ inputs.urls }}
+        run: |
+          python scripts/download_audio.py             --sources sources.json             --assets app/src/main/assets             ${{ steps.cookies.outputs.args }}
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+
+      - name: Build debug APK
+        run: gradle --no-daemon :app:assembleDebug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: baby-music-apk
+          path: app/build/outputs/apk/debug/app-debug.apk
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Upload generated MP3 files
+        uses: actions/upload-artifact@v4
+        with:
+          name: baby-music-audio
+          path: app/src/main/assets/audio/*.mp3
+          retention-days: 30
+          if-no-files-found: ignore
