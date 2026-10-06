@@ -1,4 +1,5 @@
 name: Build Baby Music APK
+# Build trigger enabled for APK delivery
 
 on:
   push:
