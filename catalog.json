@@ -1,0 +1,254 @@
+[
+  {
+    "order": 1,
+    "category": "Động vật",
+    "emoji": "🦆",
+    "title": "Một Con Vịt",
+    "version": "Xuân Mai – Xuan Mai & Con Co Be Be Official",
+    "youtube": "https://www.youtube.com/watch?v=OcIALhFrt-Q",
+    "download_enabled": false
+  },
+  {
+    "order": 2,
+    "category": "Động vật",
+    "emoji": "🐘",
+    "title": "Chú Voi Con Ở Bản Đôn",
+    "version": "Cao Lê Hà Trang – LALATV",
+    "youtube": "https://www.youtube.com/watch?v=B5m5p3vPqO8",
+    "download_enabled": false
+  },
+  {
+    "order": 3,
+    "category": "Động vật",
+    "emoji": "🦎",
+    "title": "Hai Con Thằn Lằn Con",
+    "version": "Kênh Thiếu Nhi – BHMEDIA",
+    "youtube": "https://www.youtube.com/watch?v=YM61YnUUQ8U",
+    "download_enabled": false
+  },
+  {
+    "order": 4,
+    "category": "Động vật",
+    "emoji": "🐸",
+    "title": "Chú Ếch Con",
+    "version": "Bé Tú Anh – BHMEDIA",
+    "youtube": "https://www.youtube.com/watch?v=UB6RylHKwM8",
+    "download_enabled": false
+  },
+  {
+    "order": 5,
+    "category": "Động vật",
+    "emoji": "🐥",
+    "title": "Đàn Gà Con",
+    "version": "Xuân Mai – Official Làng Văn Music",
+    "youtube": "https://www.youtube.com/watch?v=cjGYnFk-qqg",
+    "download_enabled": false
+  },
+  {
+    "order": 6,
+    "category": "Động vật",
+    "emoji": "🐟",
+    "title": "Cá Vàng Bơi",
+    "version": "Bé Khánh Vy – BHMEDIA",
+    "youtube": "https://www.youtube.com/watch?v=3PrxxHMjQKA",
+    "download_enabled": false
+  },
+  {
+    "order": 7,
+    "category": "Động vật",
+    "emoji": "🦗",
+    "title": "Con Cào Cào",
+    "version": "Bé Khánh Vy",
+    "youtube": "https://www.youtube.com/watch?v=jUgtsyqcK4o",
+    "download_enabled": false
+  },
+  {
+    "order": 8,
+    "category": "Động vật",
+    "emoji": "🐶",
+    "title": "Gà Trống, Mèo Con Và Cún Con",
+    "version": "BHMEDIA",
+    "youtube": "https://www.youtube.com/watch?v=SqCvOL9UcdA",
+    "download_enabled": false
+  },
+  {
+    "order": 9,
+    "category": "Động vật",
+    "emoji": "🐱",
+    "title": "Rửa Mặt Như Mèo",
+    "version": "Bảo Ngọc – BHMEDIA",
+    "youtube": "https://www.youtube.com/watch?v=2bUwTDauIU0",
+    "download_enabled": false
+  },
+  {
+    "order": 10,
+    "category": "Động vật",
+    "emoji": "🦋",
+    "title": "Kìa Con Bướm Vàng",
+    "version": "Xuân Mai – Con Cò Bé Bé Official",
+    "youtube": "https://www.youtube.com/watch?v=8kaq9sAX-ws",
+    "download_enabled": false
+  },
+  {
+    "order": 11,
+    "category": "Gia đình",
+    "emoji": "👵",
+    "title": "Cháu Yêu Bà",
+    "version": "Bé Thiên Thư – BHMEDIA",
+    "youtube": "https://www.youtube.com/watch?v=W8EwfBD_G7Q",
+    "download_enabled": false
+  },
+  {
+    "order": 12,
+    "category": "Gia đình",
+    "emoji": "👩",
+    "title": "Mẹ Yêu Không Nào",
+    "version": "Xuân Mai – Con Cò Bé Bé Official",
+    "youtube": "https://www.youtube.com/watch?v=gjJtxAr76og",
+    "download_enabled": false
+  },
+  {
+    "order": 13,
+    "category": "Gia đình",
+    "emoji": "❤️",
+    "title": "Cho Con",
+    "version": "Xuân Mai – Con Cò Bé Bé Official",
+    "youtube": "https://www.youtube.com/watch?v=JIuoLfp7kI8",
+    "download_enabled": false
+  },
+  {
+    "order": 14,
+    "category": "Đi học",
+    "emoji": "🎒",
+    "title": "Cháu Lên Ba / Cháu Đi Mẫu Giáo",
+    "version": "Bé Bảo Vy – BHMEDIA",
+    "youtube": "https://www.youtube.com/watch?v=lSAA_h0sGBQ",
+    "download_enabled": false
+  },
+  {
+    "order": 15,
+    "category": "Đi học",
+    "emoji": "🏫",
+    "title": "Em Đi Mẫu Giáo",
+    "version": "Xuân Mai – Con Cò Bé Bé Official",
+    "youtube": "https://www.youtube.com/watch?v=7g592qzHXmU",
+    "download_enabled": false
+  },
+  {
+    "order": 16,
+    "category": "Đi học",
+    "emoji": "☀️",
+    "title": "Vui Đến Trường",
+    "version": "Vn Kids",
+    "youtube": "https://www.youtube.com/watch?v=xrGnNubqeY8",
+    "download_enabled": false
+  },
+  {
+    "order": 17,
+    "category": "Đi học",
+    "emoji": "🎒",
+    "title": "Đi Học",
+    "version": "Bé Khánh Thy – VOI TV",
+    "youtube": "https://www.youtube.com/watch?v=_SQZFLGXR4A",
+    "download_enabled": false
+  },
+  {
+    "order": 18,
+    "category": "Đi học",
+    "emoji": "🏫",
+    "title": "Trường Chúng Cháu Là Trường Mầm Non",
+    "version": "LALATV",
+    "youtube": "https://www.youtube.com/watch?v=hBQk-WZrs8E",
+    "download_enabled": false
+  },
+  {
+    "order": 19,
+    "category": "Sinh hoạt / học tập",
+    "emoji": "🧹",
+    "title": "Bé Quét Nhà",
+    "version": "Xuân Mai – Con Cò Bé Bé Official",
+    "youtube": "https://www.youtube.com/watch?v=Dh0USj1AjXs",
+    "download_enabled": false
+  },
+  {
+    "order": 20,
+    "category": "Sinh hoạt / học tập",
+    "emoji": "🔢",
+    "title": "Tập Đếm",
+    "version": "Bé Bảo Ngọc",
+    "youtube": "https://www.youtube.com/watch?v=gL69Nnyahus",
+    "download_enabled": false
+  },
+  {
+    "order": 21,
+    "category": "Sinh hoạt / học tập",
+    "emoji": "🖐️",
+    "title": "Năm Ngón Tay Ngoan",
+    "version": "Kênh Thiếu Nhi – BHMEDIA",
+    "youtube": "https://www.youtube.com/watch?v=upBAqaoKEbE",
+    "download_enabled": false
+  },
+  {
+    "order": 22,
+    "category": "Sinh hoạt / học tập",
+    "emoji": "🐰",
+    "title": "Trời Nắng Trời Mưa",
+    "version": "Thanh Ngân – Vịt Con Music",
+    "youtube": "https://www.youtube.com/watch?v=i0pHeFACZTI",
+    "download_enabled": false
+  },
+  {
+    "order": 23,
+    "category": "Sinh hoạt / học tập",
+    "emoji": "🎺",
+    "title": "Đội Kèn Tí Hon",
+    "version": "Bé Minh Tâm",
+    "youtube": "https://www.youtube.com/watch?v=RAUV488ZvWQ",
+    "download_enabled": false
+  },
+  {
+    "order": 24,
+    "category": "Đồng dao / dân gian",
+    "emoji": "🌾",
+    "title": "Bắc Kim Thang",
+    "version": "Xuân Mai – Con Cò Bé Bé Official",
+    "youtube": "https://www.youtube.com/watch?v=oxB1_R3xaIc",
+    "download_enabled": false
+  },
+  {
+    "order": 25,
+    "category": "Đồng dao / dân gian",
+    "emoji": "🌱",
+    "title": "Lý Cây Xanh",
+    "version": "Bản thiếu nhi",
+    "youtube": "https://www.youtube.com/watch?v=VinvK3DiAUA",
+    "download_enabled": false
+  },
+  {
+    "order": 26,
+    "category": "Đồng dao / dân gian",
+    "emoji": "✋",
+    "title": "Tập Tầm Vông",
+    "version": "Xuân Mai – BHMEDIA",
+    "youtube": "https://www.youtube.com/watch?v=yoyPY1_H6qQ",
+    "download_enabled": false
+  },
+  {
+    "order": 27,
+    "category": "Đồng dao / dân gian",
+    "emoji": "👫",
+    "title": "Dung Dăng Dung Dẻ",
+    "version": "BHMEDIA",
+    "youtube": "https://www.youtube.com/watch?v=rASZFdItGGg",
+    "download_enabled": false
+  },
+  {
+    "order": 28,
+    "category": "Đồng dao / dân gian",
+    "emoji": "🪚",
+    "title": "Kéo Cưa Lừa Xẻ",
+    "version": "Bản thiếu nhi",
+    "youtube": "https://www.youtube.com/watch?v=AOcdq7_1W58",
+    "download_enabled": false
+  }
+]
