@@ -1,6 +1,11 @@
 name: Build Baby Music APK
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/build-apk.yml"
+      - "build-request.txt"
   workflow_dispatch:
     inputs:
       urls:
