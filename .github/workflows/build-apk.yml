@@ -6,7 +6,11 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/build-apk.yml"
-      - "build-request.txt"
+      - "sources.json"
+      - "scripts/download_audio.py"
+      - "app/**"
+      - "build.gradle"
+      - "settings.gradle"
   workflow_dispatch:
     inputs:
       urls:
