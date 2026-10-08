@@ -45,7 +45,7 @@ YouTube chặn IP runner của GitHub ("Sign in to confirm you're not a bot"), n
 4. Mã hoá base64:
    - macOS: `base64 -i cookies.txt | pbcopy`
    - Linux: `base64 -w0 cookies.txt`
-   - Windows PowerShell: `[Convert]::ToBase64String([IO.File]::ReadAllBytes("cookies.txt")) | Set-Clipboard`
+   - Windows PowerShell (mở trong thư mục chứa file): `[Convert]::ToBase64String([IO.File]::ReadAllBytes("$PWD\cookies.txt")) | Set-Clipboard`
 5. Repo → `Settings -> Secrets and variables -> Actions -> New repository secret`, tên `YOUTUBE_COOKIES_B64`, dán chuỗi base64.
 
 Cookies hết hạn thì xuất lại và cập nhật secret.
