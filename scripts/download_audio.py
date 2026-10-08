@@ -33,6 +33,45 @@ def load_sources(path: Path):
     return data
 
 
+def format_duration(seconds):
+    if not seconds:
+        return ""
+    minutes, seconds = divmod(int(seconds), 60)
+    return f"{minutes}:{seconds:02d}"
+
+
+def write_step_summary(report):
+    # Bảng trong trang kết quả GitHub Actions để đối chiếu từng link với video thật.
+    summary_path = os.getenv("GITHUB_STEP_SUMMARY")
+    if not summary_path:
+        return
+
+    def cell(value):
+        return str(value or "").replace("|", "\\|").replace("\n", " ")
+
+    lines = [
+        "## Nhạc tải từ YouTube",
+        "",
+        "| # | Bài hát | Tiêu đề trên YouTube | Kênh | Thời lượng | Kết quả |",
+        "|---|---|---|---|---|---|",
+    ]
+    for position, row in enumerate(report, start=1):
+        lines.append(
+            "| {} | {} | [{}]({}) | {} | {} | {} |".format(
+                position,
+                cell(row["title"]),
+                cell(row["youtube_title"]) or "link",
+                row["url"],
+                cell(row["channel"]),
+                format_duration(row["duration"]),
+                cell(row["status"]),
+            )
+        )
+
+    with open(summary_path, "a", encoding="utf-8") as summary:
+        summary.write("\n".join(lines) + "\n")
+
+
 def main():
     args = parse_args()
 
@@ -80,6 +119,7 @@ def main():
 
     songs = []
     failures = []
+    report = []
 
     with YoutubeDL(ydl_options) as ydl:
         for position, source in enumerate(sources, start=1):
@@ -105,19 +145,41 @@ def main():
                     or ""
                 ).strip()
 
-                songs.append(
+                song = {
+                    "id": media_id,
+                    "title": title,
+                    "artist": artist,
+                    "duration": info.get("duration"),
+                    "file": f"audio/{mp3_path.name}",
+                }
+                if source.get("emoji"):
+                    song["emoji"] = source["emoji"]
+                songs.append(song)
+
+                report.append(
                     {
-                        "id": media_id,
                         "title": title,
-                        "artist": artist,
+                        "url": url,
+                        "youtube_title": info.get("title"),
+                        "channel": info.get("channel") or info.get("uploader"),
                         "duration": info.get("duration"),
-                        "file": f"audio/{mp3_path.name}",
+                        "status": "✅",
                     }
                 )
 
             except Exception as exc:
                 failures.append({"url": url, "error": str(exc)})
                 print(f"Không tải được: {url}\n{exc}")
+                report.append(
+                    {
+                        "title": source.get("title") or url,
+                        "url": url,
+                        "youtube_title": None,
+                        "channel": None,
+                        "duration": None,
+                        "status": f"❌ {exc}",
+                    }
+                )
 
     manifest_path.write_text(
         json.dumps(songs, ensure_ascii=False, indent=2) + "\n",
@@ -125,6 +187,7 @@ def main():
     )
 
     print(f"\nĐã tạo {len(songs)} bài trong {manifest_path}")
+    write_step_summary(report)
 
     if failures:
         print("\nCác nguồn bị lỗi:")

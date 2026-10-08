@@ -5,14 +5,21 @@ on:
     branches: [main]
     paths:
       - ".github/workflows/build-apk.yml"
+      - "sources.json"
+      - "scripts/download_audio.py"
       - "scripts/generate_public_domain_music.py"
       - "app/**"
   workflow_dispatch:
     inputs:
       urls:
-        description: "Tùy chọn: URL media mà bạn có quyền tải. Để trống để build 7 bài nursery public-domain có sẵn."
+        description: "Tùy chọn: URL media mà bạn có quyền tải, dùng thay cho sources.json. Để trống để tải 28 bài trong sources.json."
         required: false
         type: string
+      builtin_music:
+        description: "Bỏ qua YouTube, build bằng 7 bài nursery public-domain có sẵn"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -21,7 +28,7 @@ jobs:
   build:
     name: Generate music and build APK
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - name: Checkout
@@ -32,22 +39,30 @@ jobs:
         with:
           python-version: "3.12"
 
+      # yt-dlp cần Deno để giải JS challenge của YouTube.
+      - name: Set up Deno
+        if: ${{ !inputs.builtin_music }}
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
       - name: Install audio tools
         shell: bash
         run: |
           python -m pip install --upgrade pip
-          python -m pip install --upgrade yt-dlp
+          python -m pip install --upgrade "yt-dlp[default]"
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
       - name: Generate built-in nursery music
+        if: ${{ inputs.builtin_music }}
         shell: bash
         run: |
           python scripts/generate_public_domain_music.py \
             --assets app/src/main/assets
 
       - name: Prepare optional cookies
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.urls != '' }}
+        if: ${{ !inputs.builtin_music }}
         id: cookies
         shell: bash
         env:
@@ -60,8 +75,8 @@ jobs:
             echo "args=" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Use permitted input URLs instead
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.urls != '' }}
+      - name: Download songs from sources.json or input URLs
+        if: ${{ !inputs.builtin_music }}
         shell: bash
         env:
           INPUT_URLS: ${{ inputs.urls }}

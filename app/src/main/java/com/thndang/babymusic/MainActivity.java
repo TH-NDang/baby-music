@@ -178,7 +178,7 @@ public class MainActivity extends Activity {
         row.setLayoutParams(rowParams);
 
         TextView icon = new TextView(this);
-        icon.setText("🎵");
+        icon.setText(song.emoji);
         icon.setTextSize(30);
         icon.setGravity(Gravity.CENTER);
         LinearLayout.LayoutParams iconParams = new LinearLayout.LayoutParams(dp(64), dp(64));
@@ -325,8 +325,9 @@ public class MainActivity extends Activity {
                 String title = item.optString("title", "Bài hát");
                 String artist = item.optString("artist", "");
                 String file = item.getString("file");
+                String emoji = item.optString("emoji", "🎵");
 
-                songs.add(new Song(title, artist, file));
+                songs.add(new Song(title, artist, file, emoji));
             }
         } catch (Exception ignored) {
         }
@@ -386,11 +387,13 @@ public class MainActivity extends Activity {
         final String title;
         final String artist;
         final String file;
+        final String emoji;
 
-        Song(String title, String artist, String file) {
+        Song(String title, String artist, String file, String emoji) {
             this.title = title;
             this.artist = artist;
             this.file = file;
+            this.emoji = emoji;
         }
     }
 }

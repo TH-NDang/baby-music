@@ -6,7 +6,7 @@
     "title": "Một Con Vịt",
     "version": "Xuân Mai – Xuan Mai & Con Co Be Be Official",
     "youtube": "https://www.youtube.com/watch?v=OcIALhFrt-Q",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 2,
@@ -15,7 +15,7 @@
     "title": "Chú Voi Con Ở Bản Đôn",
     "version": "Cao Lê Hà Trang – LALATV",
     "youtube": "https://www.youtube.com/watch?v=B5m5p3vPqO8",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 3,
@@ -24,7 +24,7 @@
     "title": "Hai Con Thằn Lằn Con",
     "version": "Kênh Thiếu Nhi – BHMEDIA",
     "youtube": "https://www.youtube.com/watch?v=YM61YnUUQ8U",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 4,
@@ -33,7 +33,7 @@
     "title": "Chú Ếch Con",
     "version": "Bé Tú Anh – BHMEDIA",
     "youtube": "https://www.youtube.com/watch?v=UB6RylHKwM8",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 5,
@@ -42,7 +42,7 @@
     "title": "Đàn Gà Con",
     "version": "Xuân Mai – Official Làng Văn Music",
     "youtube": "https://www.youtube.com/watch?v=cjGYnFk-qqg",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 6,
@@ -51,7 +51,7 @@
     "title": "Cá Vàng Bơi",
     "version": "Bé Khánh Vy – BHMEDIA",
     "youtube": "https://www.youtube.com/watch?v=3PrxxHMjQKA",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 7,
@@ -60,7 +60,7 @@
     "title": "Con Cào Cào",
     "version": "Bé Khánh Vy",
     "youtube": "https://www.youtube.com/watch?v=jUgtsyqcK4o",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 8,
@@ -69,7 +69,7 @@
     "title": "Gà Trống, Mèo Con Và Cún Con",
     "version": "BHMEDIA",
     "youtube": "https://www.youtube.com/watch?v=SqCvOL9UcdA",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 9,
@@ -78,7 +78,7 @@
     "title": "Rửa Mặt Như Mèo",
     "version": "Bảo Ngọc – BHMEDIA",
     "youtube": "https://www.youtube.com/watch?v=2bUwTDauIU0",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 10,
@@ -87,7 +87,7 @@
     "title": "Kìa Con Bướm Vàng",
     "version": "Xuân Mai – Con Cò Bé Bé Official",
     "youtube": "https://www.youtube.com/watch?v=8kaq9sAX-ws",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 11,
@@ -96,7 +96,7 @@
     "title": "Cháu Yêu Bà",
     "version": "Bé Thiên Thư – BHMEDIA",
     "youtube": "https://www.youtube.com/watch?v=W8EwfBD_G7Q",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 12,
@@ -105,7 +105,7 @@
     "title": "Mẹ Yêu Không Nào",
     "version": "Xuân Mai – Con Cò Bé Bé Official",
     "youtube": "https://www.youtube.com/watch?v=gjJtxAr76og",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 13,
@@ -114,7 +114,7 @@
     "title": "Cho Con",
     "version": "Xuân Mai – Con Cò Bé Bé Official",
     "youtube": "https://www.youtube.com/watch?v=JIuoLfp7kI8",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 14,
@@ -123,7 +123,7 @@
     "title": "Cháu Lên Ba / Cháu Đi Mẫu Giáo",
     "version": "Bé Bảo Vy – BHMEDIA",
     "youtube": "https://www.youtube.com/watch?v=lSAA_h0sGBQ",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 15,
@@ -132,7 +132,7 @@
     "title": "Em Đi Mẫu Giáo",
     "version": "Xuân Mai – Con Cò Bé Bé Official",
     "youtube": "https://www.youtube.com/watch?v=7g592qzHXmU",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 16,
@@ -141,7 +141,7 @@
     "title": "Vui Đến Trường",
     "version": "Vn Kids",
     "youtube": "https://www.youtube.com/watch?v=xrGnNubqeY8",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 17,
@@ -150,7 +150,7 @@
     "title": "Đi Học",
     "version": "Bé Khánh Thy – VOI TV",
     "youtube": "https://www.youtube.com/watch?v=_SQZFLGXR4A",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 18,
@@ -159,7 +159,7 @@
     "title": "Trường Chúng Cháu Là Trường Mầm Non",
     "version": "LALATV",
     "youtube": "https://www.youtube.com/watch?v=hBQk-WZrs8E",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 19,
@@ -168,7 +168,7 @@
     "title": "Bé Quét Nhà",
     "version": "Xuân Mai – Con Cò Bé Bé Official",
     "youtube": "https://www.youtube.com/watch?v=Dh0USj1AjXs",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 20,
@@ -177,7 +177,7 @@
     "title": "Tập Đếm",
     "version": "Bé Bảo Ngọc",
     "youtube": "https://www.youtube.com/watch?v=gL69Nnyahus",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 21,
@@ -186,7 +186,7 @@
     "title": "Năm Ngón Tay Ngoan",
     "version": "Kênh Thiếu Nhi – BHMEDIA",
     "youtube": "https://www.youtube.com/watch?v=upBAqaoKEbE",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 22,
@@ -195,7 +195,7 @@
     "title": "Trời Nắng Trời Mưa",
     "version": "Thanh Ngân – Vịt Con Music",
     "youtube": "https://www.youtube.com/watch?v=i0pHeFACZTI",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 23,
@@ -204,7 +204,7 @@
     "title": "Đội Kèn Tí Hon",
     "version": "Bé Minh Tâm",
     "youtube": "https://www.youtube.com/watch?v=RAUV488ZvWQ",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 24,
@@ -213,7 +213,7 @@
     "title": "Bắc Kim Thang",
     "version": "Xuân Mai – Con Cò Bé Bé Official",
     "youtube": "https://www.youtube.com/watch?v=oxB1_R3xaIc",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 25,
@@ -222,7 +222,7 @@
     "title": "Lý Cây Xanh",
     "version": "Bản thiếu nhi",
     "youtube": "https://www.youtube.com/watch?v=VinvK3DiAUA",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 26,
@@ -231,7 +231,7 @@
     "title": "Tập Tầm Vông",
     "version": "Xuân Mai – BHMEDIA",
     "youtube": "https://www.youtube.com/watch?v=yoyPY1_H6qQ",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 27,
@@ -240,7 +240,7 @@
     "title": "Dung Dăng Dung Dẻ",
     "version": "BHMEDIA",
     "youtube": "https://www.youtube.com/watch?v=rASZFdItGGg",
-    "download_enabled": false
+    "download_enabled": true
   },
   {
     "order": 28,
@@ -249,6 +249,6 @@
     "title": "Kéo Cưa Lừa Xẻ",
     "version": "Bản thiếu nhi",
     "youtube": "https://www.youtube.com/watch?v=AOcdq7_1W58",
-    "download_enabled": false
+    "download_enabled": true
   }
 ]
