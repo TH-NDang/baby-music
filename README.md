@@ -35,7 +35,20 @@ Có 3 cách cấp nguồn:
 - Dán một hoặc nhiều URL được phép sử dụng vào ô URL. Có thể cách nhau bằng dòng mới hoặc khoảng trắng.
 - Tick `builtin_music`: bỏ qua YouTube, build bằng 7 bài nursery public-domain do `scripts/generate_public_domain_music.py` tạo.
 
-Nếu YouTube chặn runner của GitHub ("Sign in to confirm you're not a bot"), export cookies YouTube (định dạng Netscape), mã hoá base64 và lưu vào secret `YOUTUBE_COOKIES_B64`.
+### Cookies YouTube (bắt buộc trên thực tế)
+
+YouTube chặn IP runner của GitHub ("Sign in to confirm you're not a bot"), nên workflow cần cookies của một tài khoản YouTube:
+
+1. Nên dùng một tài khoản Google phụ.
+2. Mở cửa sổ ẩn danh, đăng nhập YouTube, rồi mở `https://www.youtube.com/robots.txt` trong cùng tab.
+3. Dùng extension xuất cookies dạng Netscape (ví dụ "Get cookies.txt LOCALLY") để lưu cookies `youtube.com` thành `cookies.txt`, rồi đóng cửa sổ ẩn danh (không mở lại phiên đó để cookies không bị đổi).
+4. Mã hoá base64:
+   - macOS: `base64 -i cookies.txt | pbcopy`
+   - Linux: `base64 -w0 cookies.txt`
+   - Windows PowerShell: `[Convert]::ToBase64String([IO.File]::ReadAllBytes("cookies.txt")) | Set-Clipboard`
+5. Repo → `Settings -> Secrets and variables -> Actions -> New repository secret`, tên `YOUTUBE_COOKIES_B64`, dán chuỗi base64.
+
+Cookies hết hạn thì xuất lại và cập nhật secret.
 
 Sau khi build xong, tải artifact:
 

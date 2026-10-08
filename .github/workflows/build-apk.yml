@@ -72,6 +72,7 @@ jobs:
             echo "$YOUTUBE_COOKIES_B64" | base64 --decode > "$RUNNER_TEMP/youtube-cookies.txt"
             echo "args=--cookies $RUNNER_TEMP/youtube-cookies.txt" >> "$GITHUB_OUTPUT"
           else
+            echo "::warning::Chưa có secret YOUTUBE_COOKIES_B64. YouTube thường chặn runner của GitHub (\"Sign in to confirm you're not a bot\"); xem README để thêm cookies."
             echo "args=" >> "$GITHUB_OUTPUT"
           fi
 
